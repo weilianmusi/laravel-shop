@@ -1,0 +1,30 @@
+Yansongda\Supports\Collection Object
+(
+    [items:protected] => Array
+        (
+            [gmt_create] => 2020-05-14 10:30:41
+            [charset] => GBK
+            [gmt_payment] => 2020-05-14 10:30:51
+            [notify_time] => 2020-05-14 10:30:52
+            [subject] => 支付 Laravel Shop 的订单：20200514022847051277
+            [sign] => g3c1yzdh5+OJvTieA/GY7SHV/nyjU9/VNw7TSDreL8Br3Dc3xMr0wfQxxftT8Ns+UuM2VE0WJtXrFwOzmJsZngSrD6gZKXLbnpOTUWObKXWnuPyH+ijntGCLHVic8QrkwBRQQmB2aW77kkWSMBfrL9NFkafs1FzpNSxsdRk6mhofPJ08aI/fMw8PZP/xf5hidLrODFnZYrFzo/9y3ak0qipTiwL8mCSfAi9KvEX0YGrIaz4vr63osWlo/aTpvkn/yjHwgAKTQ4EE3r1bsR6BkcMjSBA/1//ZO4kDdtkHLABgZ67lcHDA2NsRQxgN78A1O3Sw5pl9lVr2LsTRbCx9Kw==
+            [buyer_id] => 2088102175401623
+            [invoice_amount] => 35.00
+            [version] => 1.0
+            [notify_id] => 2020051400222103051001620505827311
+            [fund_bill_list] => [{"amount":"35.00","fundChannel":"ALIPAYACCOUNT"}]
+            [notify_type] => trade_status_sync
+            [out_trade_no] => 20200514022847051277
+            [total_amount] => 35.00
+            [trade_status] => TRADE_SUCCESS
+            [trade_no] => 2020051422001401620501226793
+            [auth_app_id] => 2016082100305689
+            [receipt_amount] => 35.00
+            [point_amount] => 0.00
+            [app_id] => 2016082100305689
+            [buyer_pay_amount] => 35.00
+            [sign_type] => RSA2
+            [seller_id] => 2088102172429440
+        )
+
+)
