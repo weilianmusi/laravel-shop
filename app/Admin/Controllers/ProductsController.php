@@ -35,7 +35,7 @@ class ProductsController extends CommonProductsController
         $grid->review_count('评论数');
     }
 
-    protected function customForm(Form $grid)
+    protected function customForm(Form $form)
     {
         // 普通商品没有额外的字段，因此这里不需要写任何代码
     }
