@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.49 on 2020-06-11 08:47:58.
+ * Generated for Laravel 5.5.49 on 2020-06-23 06:31:17.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -7503,17 +7503,30 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Get the number of queue jobs that are ready to process.
+         *
+         * @param string|null $queue
+         * @return int 
+         * @static 
+         */ 
+        public static function readyNow($queue = null)
+        {
+                        /** @var \Laravel\Horizon\RedisQueue $instance */
+                        return $instance->readyNow($queue);
+        }
+        
+        /**
          * Migrate the delayed jobs that are ready to the regular queue.
          *
          * @param string $from
          * @param string $to
-         * @return array 
+         * @return void 
          * @static 
          */ 
         public static function migrateExpiredJobs($from, $to)
         {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
-                        return $instance->migrateExpiredJobs($from, $to);
+                        /** @var \Laravel\Horizon\RedisQueue $instance */
+                        $instance->migrateExpiredJobs($from, $to);
         }
         
         /**
@@ -7526,7 +7539,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function deleteReserved($queue, $job)
         {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        /** @var \Laravel\Horizon\RedisQueue $instance */
                         $instance->deleteReserved($queue, $job);
         }
         
@@ -7541,7 +7554,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function deleteAndRelease($queue, $job, $delay)
         {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        /** @var \Laravel\Horizon\RedisQueue $instance */
                         $instance->deleteAndRelease($queue, $job, $delay);
         }
         
@@ -7554,7 +7567,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getQueue($queue)
         {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+            //Method inherited from \Illuminate\Queue\RedisQueue            
+                        /** @var \Laravel\Horizon\RedisQueue $instance */
                         return $instance->getQueue($queue);
         }
         
@@ -7566,7 +7580,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getRedis()
         {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+            //Method inherited from \Illuminate\Queue\RedisQueue            
+                        /** @var \Laravel\Horizon\RedisQueue $instance */
                         return $instance->getRedis();
         }
         
@@ -7580,7 +7595,7 @@ namespace Illuminate\Support\Facades {
         public static function getJobExpiration($job)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        /** @var \Laravel\Horizon\RedisQueue $instance */
                         return $instance->getJobExpiration($job);
         }
         
@@ -7594,7 +7609,7 @@ namespace Illuminate\Support\Facades {
         public static function setContainer($container)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        /** @var \Laravel\Horizon\RedisQueue $instance */
                         $instance->setContainer($container);
         }
          
@@ -14753,6 +14768,18 @@ namespace Encore\Admin\Facades {
  
 }
 
+namespace Laravel\Horizon { 
+
+    /**
+     * 
+     *
+     */ 
+    class Horizon {
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17055,6 +17082,8 @@ namespace  {
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
 
     class Admin extends \Encore\Admin\Facades\Admin {}
+
+    class Horizon extends \Laravel\Horizon\Horizon {}
  
 }
 
