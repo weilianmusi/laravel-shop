@@ -74,7 +74,7 @@ class Product extends Model
         return $this->hasOne(CrowdfundingProduct::class);
     }
 
-    public function secKill()
+    public function seckill()
     {
         return $this->hasOne(SeckillProduct::class);
     }
